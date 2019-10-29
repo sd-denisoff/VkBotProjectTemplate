@@ -2,7 +2,7 @@ from flask import Flask
 import vk_api
 
 
-APP_URL = ''
+APP_URL = '<app_url>'
 
 
 CSRF_ENABLED = True
