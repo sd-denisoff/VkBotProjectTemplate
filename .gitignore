@@ -1,0 +1,17 @@
+# python files
+*.pyc
+
+# python cache
+__pycache__
+
+# virtual environment
+venv/
+
+# JetBrains IDE
+.idea
+
+# database
+database.db
+
+# error file
+errors.txt
