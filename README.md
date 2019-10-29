@@ -1,4 +1,4 @@
-# MCY bot
+# VK bot Project Template
 
 > Tagline
 
@@ -8,4 +8,4 @@
 - Flask + addons
 - VK API
 
-Developed by [Stepan Denisov](https://vk.com/sd.denisoff 'Stepan Denisov')
+Developed by [Stepan Denisov](https://vk.com/sd.denisoff 'VK-profile')
