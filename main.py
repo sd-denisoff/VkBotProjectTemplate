@@ -32,10 +32,10 @@ def user_recognition(id, data):
         vk.messages.send(user_id=id, random_id=generate_random_id(),
                          message='Возможности 👇', keyboard=get_default_keyboard(id))
     else:
-        text_handler(id, data)
+        message_handler(id, data)
 
 
-def text_handler(id, data):
+def message_handler(id, data):
     if 'payload' in data.keys():
         payload = json.loads(data['payload'])
         action_recognition(id, data, payload)
