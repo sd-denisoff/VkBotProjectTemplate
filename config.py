@@ -2,7 +2,7 @@ from flask import Flask
 import vk_api
 
 
-APP_URL = '<app_url>'
+APP_URL = '<host_address>'
 
 
 CSRF_ENABLED = True
@@ -17,4 +17,4 @@ access_token = '<access_token>'
 confirmation_token = '<confirmation_token>'
 
 session = vk_api.VkApi(token=access_token)
-vk = session.get_api()
+vk = session.get_api()  # API version: <version_of_api>
