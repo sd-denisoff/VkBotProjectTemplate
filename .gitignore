@@ -2,13 +2,16 @@
 *.pyc
 
 # python cache
-__pycache__
+__pycache__/
+
+# JetBrains IDE
+.idea/
+
+# MacOS trash
+.DS_Store
 
 # virtual environment
 venv/
-
-# JetBrains IDE
-.idea
 
 # database
 database.db
