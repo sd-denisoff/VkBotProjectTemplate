@@ -40,4 +40,4 @@
     python3 runner.py
     ```
 
-Developed by [someone](https://example.com 'hover comment')
+Developed by [](https://example.com 'hover comment')
