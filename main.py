@@ -8,7 +8,7 @@ from actions import *
 
 @app.route('/', methods=['GET', 'HEAD'])
 def index():
-    return 'Hello from server!'
+    return 'Hello from bot server!'
 
 
 @app.route('/', methods=['POST'])
@@ -25,10 +25,10 @@ def processing():
 
 
 def user_recognition(id, data):
-    try:
-        User.get(User.vk_id == id)
-    except User.DoesNotExist:
-        User.create(vk_id=id)
+    if User.query.filter_by(vk_id=id).first() is None:
+        user = User(vk_id=id)
+        db.session.add(user)
+        db.session.commit()
         vk.messages.send(user_id=id, random_id=generate_random_id(),
                          message='Возможности 👇', keyboard=get_default_keyboard(id))
     else:
@@ -44,13 +44,16 @@ def message_handler(id, data):
 
 
 def action_recognition(id, data, payload):
-    if payload['action'] == 'name_of_action':
+    if payload['action'] == 'action_1':
+        pass
+    elif payload['action'] == 'action_2':
         pass
 
 
 def response_generator(id, data):
-    vk.messages.send(user_id=id, message='<some default message>')
+    vk.messages.send(user_id=id, message='')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    application['DOMAIN'] = ''  # fill it
+    app.run(host='0.0.0.0', port=5000, debug=True)

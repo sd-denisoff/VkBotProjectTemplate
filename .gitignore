@@ -1,14 +1,10 @@
-# python files
-*.pyc
-
 # python cache
-__pycache__/
+*.pyc
+*__pycache__/
+*ipynb_checkpoints/
 
 # JetBrains IDE
 .idea/
-
-# MacOS trash
-.DS_Store
 
 # virtual environment
 venv/
@@ -16,5 +12,8 @@ venv/
 # database
 database.db
 
-# error file
-errors.txt
+# database migrations
+migrations/
+
+# MacOS trash
+.DS_Store
