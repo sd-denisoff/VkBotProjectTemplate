@@ -40,4 +40,4 @@
     python3 manage.py runserver
     ```
 
-Разработано [кем-то](https://example.com 'hover comment')
+Developed by [](https://example.com 'hover comment')
